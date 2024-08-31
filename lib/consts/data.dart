@@ -17,15 +17,15 @@ const double baseWidth = 1440;
 
 List<DeviceModel> devices = [
   DeviceModel(
-    device: Devices.android.onePlus8Pro,
+    device: Devices.android.samsungGalaxyNote20Ultra,
     icon: Icons.android,
   ),
   DeviceModel(
-    device: Devices.ios.iPhone13,
+    device: Devices.ios.iPhone13ProMax,
     icon: Icons.apple,
   ),
   DeviceModel(
-    device: Devices.ios.iPad,
+    device: Devices.ios.iPad12InchesGen4,
     icon: Icons.tablet,
   ),
 ];
