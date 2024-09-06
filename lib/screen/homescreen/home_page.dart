@@ -10,7 +10,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import '../../consts/agridView_connect.dart';
+import '../../consts/images_labels.dart';
 import '../../widgets/frosted_container.dart';
 import '../../widgets/rain_cloud.dart';
 import 'phone_screen_wrapper.dart';
@@ -21,7 +21,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeProvider theme = Provider.of<ThemeProvider>(context, listen: false);
-    CurrentState currentState = Provider.of<CurrentState>(context, listen: false);
+    CurrentState currentState =
+        Provider.of<CurrentState>(context, listen: false);
     Size size = MediaQuery.of(context).size;
     theme.size = MediaQuery.of(context).size;
     theme.widthRatio = theme.size.width / baseWidth;
@@ -97,40 +98,20 @@ class HomePage extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(20),
                                     ),
-                                    child: Transform(
-                                      transform: Matrix4.identity()
-                                        ..setEntry(3, 2, 0.01)
-                                        ..rotateY(-0.06),
-                                      alignment: FractionalOffset.center,
-                                      child: Row(
-                                        children: [
-                                          Flexible(
-                                            child: Center(
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(10),
-                                                child: AutoSizeText(
-                                                  'HighCoder',
-                                                  style: GoogleFonts.exo(
-                                                      fontSize: 35,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  maxFontSize: 35,
-                                                  minFontSize: 15,
-                                                  maxLines: 1,
-                                                ).animate().fadeIn(
-                                                    delay: .8.seconds,
-                                                    duration: .7.seconds),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
+                                    child: GridView.builder(
+                                      padding:const EdgeInsets.all(10),
+                                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                        crossAxisCount:3, // 2 columns
+                                        childAspectRatio:1.1, // square items
                                       ),
-                                    ),
+                                      itemCount: gridViewItems.length, // number of items
+                                      itemBuilder: (context, index) {
+                                        return gridViewItems[index];
+                                      },
+                                    )
                                   ),
                                   height: 395 * theme.heightRatio,
-                                  width: 247.5 * theme.widthRatio,
+                                  width: 240.5 * theme.widthRatio,
                                 ),
                               ),
                             ),
@@ -139,33 +120,23 @@ class HomePage extends StatelessWidget {
                                 ..setEntry(3, 2, 0.009999)
                                 ..rotateY(-0.07),
                               alignment: Alignment.topCenter,
-                              child: GridView.count(
-                                crossAxisCount: 2, // 2 columns
-                                childAspectRatio: 1, // square items
-                                children: [
-                                  GridViewItem(
-                                    imageUrl: 'assets/icons/link1.png',
-                                    label: 'Link 1',
-                                    url: 'https://www.link1.com',
-                                  ),
-                                  GridViewItem(
-                                    imageUrl: 'assets/icons/link2.png',
-                                    label: 'Link 2',
-                                    url: 'https://www.link2.com',
-                                  ),
-                                  GridViewItem(
-                                    imageUrl: 'assets/icons/link3.png',
-                                    label: 'Link 3',
-                                    url: 'https://www.link3.com',
-                                  ),
-                                  GridViewItem(
-                                    imageUrl: 'assets/icons/link4.png',
-                                    label: 'Link 4',
-                                    url: 'https://www.link4.com',
-                                  ),
-                                ],
-                              ),
-                            )
+                              child:  FrostedWidget(
+                                childW: Column(
+                                  children:[
+                                    Padding(
+                                      padding: const EdgeInsets.all(10.0),
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                        GestureDetector(onTap:()=> currentState.launchInBrowser(toLinkdin),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/linakdin.png"))),
+                                        GestureDetector(onTap:()=> currentState.launchInBrowser(toGithub),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/github.png"))),
+                                        GestureDetector(onTap:()=> currentState.launchInBrowser(toInstagram),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/insata.png"))),
+                                      ],),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ),
                           ],
                         ),
 
@@ -198,42 +169,90 @@ class HomePage extends StatelessWidget {
                                 ..rotateY(0.06),
                               alignment: Alignment.bottomCenter,
                               child: FrostedWidget(
-                                height: 395 * theme.heightRatio,
+                                height: 410 * theme.heightRatio,
                                 width: 247.5 * theme.widthRatio,
-                                childW: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Wrap(
-                                      children: [
-                                        ...List.generate(
-                                          colorPalette.length,
-                                          (index) => Consumer<CurrentState>(
-                                              builder: (context, _, __) {
-                                            return CustomButton(
-                                              margin: const EdgeInsets.all(10),
-                                              pressed:
-                                                  currentState.selectedColor ==
-                                                          index
-                                                      ? Pressed.pressed
-                                                      : Pressed.notPressed,
-                                              animate: true,
-                                              borderRadius: 100,
-                                              shadowColor: Colors.blueGrey[50],
-                                              isThreeD: true,
-                                              backgroundColor:
-                                                  colorPalette[index].color,
-                                              width: 50 * theme.widthRatio,
-                                              height: 50 * theme.widthRatio,
-                                              onPressed: () {
-                                                currentState
-                                                    .changeGradient(index);
-                                              },
-                                            );
-                                          }),
-                                        )
-                                      ],
-                                    ),
-                                  ],
+                                childW: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      AutoSizeText("Experience",
+                                        style: GoogleFonts.inter(
+                                          // fontSize: 30,
+                                            color: Colors.red,
+                                            fontWeight: FontWeight.w600),
+                                        maxFontSize: 30,
+                                        minFontSize: 15,
+                                        maxLines: 3,
+                                      ),
+                                      Align(
+                                          alignment: Alignment.topLeft,
+                                          child:Text(
+                                            '1) Working In Reidius Infra & Chemisphere as flutter intern',
+                                            style: GoogleFonts.inter(
+                                              fontSize: 13,
+                                                color: Colors.black,
+                                                fontWeight:
+                                                FontWeight.w600),
+                                            maxLines:4,
+                                          )),
+
+                                      const SizedBox(height:6),
+
+                                      Align(
+                                          alignment: Alignment.topLeft,
+                                          child:Text(
+                                            '2) I Have Developed 20+ App Using Flutter Technology',
+                                            style: GoogleFonts.inter(
+                                                fontSize: 13,
+                                                color: Colors.black,
+                                                fontWeight:
+                                                FontWeight.w600),
+                                            maxLines:4,
+                                          )),
+
+                                      const SizedBox(height:6),
+
+                                      Align(
+                                          alignment: Alignment.topLeft,
+                                          child:Text(
+                                            '3) Over the past 2 years focus on App Development',
+                                            style: GoogleFonts.inter(
+                                                fontSize: 13,
+                                                color: Colors.black,
+                                                fontWeight:
+                                                FontWeight.w600),
+                                            maxLines:4,
+                                          )),
+
+                                      const SizedBox(height:6),
+
+                                      Align(
+                                          alignment: Alignment.topLeft,
+                                          child:Text(
+                                            '3) Published 3 apps on play store',
+                                            style: GoogleFonts.inter(
+                                                fontSize: 13,
+                                                color: Colors.black,
+                                                fontWeight:
+                                                FontWeight.w600),
+                                            maxLines:4,
+                                          )),
+
+                                      const SizedBox(height:6),
+                                      Align(
+                                          alignment: Alignment.topLeft,
+                                          child:Text(
+                                            '4) MY App solved  Real word problem, and using 100+ users ',
+                                            style: GoogleFonts.inter(
+                                                fontSize: 13,
+                                                color: Colors.black,
+                                                fontWeight:
+                                                FontWeight.w600),
+                                            maxLines:4,
+                                          )),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -254,39 +273,35 @@ class HomePage extends StatelessWidget {
                                       margin: const EdgeInsets.all(10),
                                       padding:
                                           EdgeInsets.all(10 * theme.widthRatio),
-                                      child: Center(
-                                          child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                      child: Wrap(
                                         children: [
-                                          AutoSizeText(
-                                            '"Don\'t run after success run after perfection success will follow."',
-                                            style: GoogleFonts.inter(
-                                                // fontSize: 30,
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.w400),
-                                            maxFontSize: 25,
-                                            minFontSize: 10,
-                                            maxLines: 3,
-                                          ),
-                                          Align(
-                                              alignment: Alignment.bottomRight,
-                                              child: AutoSizeText(
-                                                '-Baba Ranchhoddas',
-                                                style: GoogleFonts.inter(
-                                                    // fontSize: 12,
-                                                    color: Colors.white
-                                                        .withOpacity(0.6),
-                                                    fontWeight:
-                                                        FontWeight.w400),
-                                                maxFontSize: 12,
-                                                minFontSize: 6,
-                                                maxLines: 1,
-                                              )),
+                                          ...List.generate(
+                                            colorPalette.length,
+                                                (index) => Consumer<CurrentState>(
+                                                builder: (context, _, __) {
+                                                  return CustomButton(
+                                                    margin: const EdgeInsets.all(8),
+                                                    pressed:
+                                                    currentState.selectedColor ==
+                                                        index
+                                                        ? Pressed.pressed
+                                                        : Pressed.notPressed,
+                                                    animate: true,
+                                                    borderRadius: 100,
+                                                    shadowColor: Colors.blueGrey[50],
+                                                    isThreeD: true,
+                                                    backgroundColor:
+                                                    colorPalette[index].color,
+                                                    width:40 * theme.widthRatio,
+                                                    height:40 * theme.widthRatio,
+                                                    onPressed: () {
+                                                      currentState.changeGradient(index);
+                                                    },
+                                                  );
+                                                }),
+                                          )
                                         ],
-                                      )),
+                                      ),
                                     ),
                                   ).animate().fadeIn(
                                       delay: 1.seconds, duration: .7.seconds),
@@ -345,5 +360,4 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-
 }

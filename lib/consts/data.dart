@@ -117,12 +117,12 @@ List<AppModel> apps = [
     color: Colors.white,
     link: twitter,
   ),
-  AppModel(
-    title: "Topmate",
-    assetPath: "assets/icons/topMate.png",
-    color: Colors.white,
-    link: topMate,
-  ),
+  // AppModel(
+  //   title: "Topmate",
+  //   assetPath: "assets/icons/topMate.png",
+  //   color: Colors.white,
+  //   link: topMate,
+  // ),
   AppModel(
       title: "Experience",
       color: Colors.white,
@@ -250,7 +250,9 @@ const String youtubeChannel = "https://www.youtube.com/@highcoder";
 const String linkedIn = "https://www.linkedin.com/in/high-coder/";
 const String github = "https://github.com/high-coder";
 const String twitter = "https://twitter.com/highcoder__";
-const String topMate = "https://topmate.io/highcoder";
+const String toLinkdin = "https://www.linkedin.com/in/yuvaraj-dekhane-473064297/";
+const String toGithub = "https://github.com/yuvaraj8080";
+const String toInstagram = "https://www.instagram.com/yuvaraj_dekhane/";
 const String resumeLink =
     "https://drive.google.com/file/d/1LO3Km6fFkJVW92MNXRLSYl--E9YlTHJd/view";
 const String email = "deepakmittal941@gmail.com";
