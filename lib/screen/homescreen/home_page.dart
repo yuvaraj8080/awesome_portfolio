@@ -10,6 +10,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
+import '../../consts/agridView_connect.dart';
 import '../../widgets/frosted_container.dart';
 import '../../widgets/rain_cloud.dart';
 import 'phone_screen_wrapper.dart';
@@ -20,8 +21,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeProvider theme = Provider.of<ThemeProvider>(context, listen: false);
-    CurrentState currentState =
-        Provider.of<CurrentState>(context, listen: false);
+    CurrentState currentState = Provider.of<CurrentState>(context, listen: false);
     Size size = MediaQuery.of(context).size;
     theme.size = MediaQuery.of(context).size;
     theme.widthRatio = theme.size.width / baseWidth;
@@ -139,52 +139,33 @@ class HomePage extends StatelessWidget {
                                 ..setEntry(3, 2, 0.009999)
                                 ..rotateY(-0.07),
                               alignment: Alignment.topCenter,
-                              child: FrostedWidget(
-                                onPressed: () {
-                                  currentState.launchInBrowser(topMate);
-                                },
-                                childW: Center(
-                                  child: Container(
-                                    padding: const EdgeInsets.all(10),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset(
-                                          "assets/icons/topMate.png",
-                                          width: 50 *
-                                              theme.widthRatio *
-                                              theme.heightRatio,
-                                          height: 50 *
-                                              theme.widthRatio *
-                                              theme.heightRatio,
-                                        ),
-                                        SizedBox(
-                                          height: 10 * theme.heightRatio,
-                                        ),
-                                        Flexible(
-                                            child: AutoSizeText(
-                                          "Let's connect!",
-                                          style: GoogleFonts.exo(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 28 *
-                                                theme.widthRatio *
-                                                theme.heightRatio,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          maxFontSize: 28,
-                                          minFontSize: 15,
-                                        )),
-                                      ],
-                                    ).animate().fadeIn(
-                                        delay: 1.seconds, duration: .7.seconds),
+                              child: GridView.count(
+                                crossAxisCount: 2, // 2 columns
+                                childAspectRatio: 1, // square items
+                                children: [
+                                  GridViewItem(
+                                    imageUrl: 'assets/icons/link1.png',
+                                    label: 'Link 1',
+                                    url: 'https://www.link1.com',
                                   ),
-                                ),
-                                height: 175.5 * theme.heightRatio,
-                                width: 245 * theme.widthRatio,
+                                  GridViewItem(
+                                    imageUrl: 'assets/icons/link2.png',
+                                    label: 'Link 2',
+                                    url: 'https://www.link2.com',
+                                  ),
+                                  GridViewItem(
+                                    imageUrl: 'assets/icons/link3.png',
+                                    label: 'Link 3',
+                                    url: 'https://www.link3.com',
+                                  ),
+                                  GridViewItem(
+                                    imageUrl: 'assets/icons/link4.png',
+                                    label: 'Link 4',
+                                    url: 'https://www.link4.com',
+                                  ),
+                                ],
                               ),
-                            ),
+                            )
                           ],
                         ),
 
@@ -364,4 +345,5 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
 }
