@@ -95,39 +95,17 @@ List<AppModel> apps = [
       icon: Icons.person,
       screen: const AboutMe()),
   AppModel(
-      title: "Skills",
-      color: Colors.white,
-      icon: Icons.ac_unit_rounded,
-      screen: const Skills()),
-  AppModel(
-    title: "Youtube",
-    assetPath: "assets/icons/youtube.svg",
-    color: Colors.white,
-    link: youtubeChannel,
-  ),
-  AppModel(
-    title: "LinkedIn",
-    assetPath: "assets/icons/linkedin.svg",
-    color: Colors.white,
-    link: linkedIn,
-  ),
-  AppModel(
-    title: "Twitter/X",
-    assetPath: "assets/icons/twitter.svg",
-    color: Colors.white,
-    link: twitter,
-  ),
-  // AppModel(
-  //   title: "Topmate",
-  //   assetPath: "assets/icons/topMate.png",
-  //   color: Colors.white,
-  //   link: topMate,
-  // ),
-  AppModel(
       title: "Experience",
       color: Colors.white,
       icon: FontAwesomeIcons.idBadge,
-      screen: const Experience()),
+      screen: const Experience()
+  ),
+  AppModel(
+      title: "Skills",
+      color: Colors.white,
+      icon: Icons.ac_unit_rounded,
+      screen: const Skills()
+  ),
   AppModel(
     title: "Education",
     color: Colors.white,
@@ -135,115 +113,138 @@ List<AppModel> apps = [
     screen: const Education(),
   ),
   AppModel(
-    title: "Github",
-    assetPath: "assets/icons/github.svg",
+    title: "Women Safety",
     color: Colors.white,
-    link: github,
+    icon: FontAwesomeIcons.appStore,
+    screen:null
+  ), AppModel(
+    title: "E-commerce",
+    color: Colors.white,
+    icon: FontAwesomeIcons.appStore,
+    screen:null
+  ), AppModel(
+    title: "Education App",
+    color: Colors.white,
+    icon: FontAwesomeIcons.appStore,
+    screen:null,
   ),
   AppModel(
-    title: "Play Store",
-    assetPath: "assets/icons/playstore.svg",
+    title: "Reidius Infra",
     color: Colors.white,
-    link: playApps,
+    icon: FontAwesomeIcons.appStore,
+    screen:null,
   ),
 ];
 
 final List<JobExperience> education = [
   JobExperience(
     color: Colors.red,
-    location: "Patiala, India",
+    location: "India, mumbai",
     title: 'Computer Engineering',
-    company: 'Thapar Institure of Engineering',
-    startDate: 'June 2021',
+    company: 'Rajiv Gandhi Institute of Technology',
+    startDate: 'June 2022',
     endDate: 'Present',
-    bulletPoints: [
-      "Currently in the final year of my college!",
+    bulletPoints: ["Currently in the third year of my college!",
     ],
   ),
+
   JobExperience(
     color: Colors.blue,
-    location: "Patiala, India",
-    title: 'Diploma in Computer Science',
-    company: 'Thapar Polytechnic College',
-    startDate: 'June 2018',
-    endDate: 'June 2021',
+    location: "Mumbai, India",
+    title: "12th",
+    company: 'Wilson College',
+    startDate: 'June 2019',
+    endDate: 'June 2020',
+    bulletPoints: [
+      'Some of the best years of college life',
+    ],
+  ),
+
+  JobExperience(
+    color: Colors.blue,
+    location: "Mahrashtra, Jalana",
+    title: "10th",
+    company: 'Dharmveer Sambhaji Highshool Domegoan',
+    startDate: 'june 2016',
+    endDate: 'June 2017',
     bulletPoints: [
       'Some of the best years of college life',
     ],
   ),
 ];
 
+
 final List<JobExperience> jobExperiences = [
   JobExperience(
     color: Colors.blue,
-    location: "Banglore, India",
-    title: 'Full Stack Developer',
-    company: 'Stimuler',
-    startDate: 'Feb 2023',
-    endDate: 'Present',
+    location: "mumbai, india",
+    title: 'Full Flutter Developer',
+    company: 'Chemisphere',
+    startDate: 'July 2024',
+    endDate: 'Aug 2024',
     bulletPoints: [
-      "Actively develop and manage push notifications to engage users effectively.",
-      "Successfully set up in-app purchase functionality for both iOS and Android platforms.",
-      "Utilize the Provider package for streamlined state management and implement real-time data streams.",
-      "Employ Amplitude and Firebase Analytics to track and analyze user behavior, informing data-driven decisions.",
-      "The Startup has over 3,00,000 lakh active users",
+      "Contributed to enhancing both the education app and web admin panel using Flutter technology. Developed a",
+      "robust user authentication system via the admin panel for subscribed users, allowing seamless profile updates",
+      "Managed student batches, organized notes, previous year question papers (PYQS) by batch, and facilitated live",
+      "lectures directly from the app. Additionally, implemented features to manage test series, allowing users to take",
+      "tests, and generating user test scorecards to provide insightful analysis of student progress through dynamic visualizations. 📊💻",
     ],
   ),
   // Add more job experiences here...
   JobExperience(
     color: Colors.redAccent,
     location: "Remote",
-    title: 'Flutter Developer',
-    company: 'Perpetuum India',
-    startDate: 'Oct 2022',
-    endDate: 'Jan 2023',
+    title: 'Full Flutter Developer',
+    company: 'Reidius Infra',
+    startDate: 'Aug 2024',
+    endDate: 'Running',
     bulletPoints: [
-      "Establish voice calling functionality using Agora SDK to enable real-time communication within the app.",
-      "Implement intricate animations using Rive, enhancing the app's visual appeal and engagement.",
-      "Collaborate directly with Stanza Living's CTO, gaining insights into industry best practices and cutting-edge technologies.",
-      "Acquire proficiency in server-driven UI setup, optimizing app flexibility and scalability through dynamic configuration.",
+      // "Establish voice calling functionality using Agora SDK to enable real-time communication within the app.",
+      // "Implement intricate animations using Rive, enhancing the app's visual appeal and engagement.",
+      // "Collaborate directly with Stanza Living's CTO, gaining insights into industry best practices and cutting-edge technologies.",
+      // "Acquire proficiency in server-driven UI setup, optimizing app flexibility and scalability through dynamic configuration.",
     ],
   ),
   JobExperience(
     color: Colors.orangeAccent,
     location: "Remote",
-    title: 'App Architecture Intern',
-    company: 'Habeato',
-    startDate: 'Oct 2021',
-    endDate: 'Nov 2021',
-    bulletPoints: [
-      "Collaborated with founders to develop a HealthifyMe clone, demonstrating strong teamwork and app development skills.",
-      "Engineered complex animations to enhance user experience and app visual appeal.",
-      "Played an active role in system design processes, contributing to efficient and scalable app architecture.",
-    ],
-  ),
-  JobExperience(
-    color: Colors.greenAccent,
-    location: "Remote",
     title: 'App Developer',
-    company: 'Kylo Apps',
-    startDate: 'Sep 2021',
-    endDate: 'Oct 2021',
+    company: 'Coding WithT',
+    startDate: 'Oct 2024',
+    endDate: 'Nov 2024',
     bulletPoints: [
-      "Collaborated as a team member in developing a cryptocurrency wallet, akin to Trust Wallet, showcasing strong teamwork and blockchain app development expertise.",
-      "Proficiently integrated REST APIs into the application, enhancing its functionality and connectivity with external services."
+      // "Collaborated with founders to develop a HealthifyMe clone, demonstrating strong teamwork and app development skills.",
+      // "Engineered complex animations to enhance user experience and app visual appeal.",
+      // "Played an active role in system design processes, contributing to efficient and scalable app architecture.",
     ],
   ),
-  JobExperience(
-    color: Colors.black,
-    location: "Remote",
-    title: 'Flutter App Intern',
-    company: 'Cogent Web Services',
-    startDate: 'Dec 2020',
-    endDate: 'June 2021',
-    bulletPoints: [
-      "Independently developed a Life Simulator game using Flutter from scratch, applying state-of-the-art state management practices to ensure a top-tier user experience.",
-      "Leveraged Flutter's robust features to craft an immersive and captivating gameplay experience, demonstrating proficiency in app development.",
-      "Successfully implemented Google Ads, in-app purchases, and Hive database for efficient user data storage and monetization strategies.",
-      "Generated creative ideas for client pitches, fostering creativity and ensuring the game's entertainment value and thought-provoking nature.",
-      "Published the game on the Play Store, achieving over 5,000 downloads, showcasing the ability to deliver a popular and engaging mobile application.",
-    ],
-  ),
+  // JobExperience(
+  //   color: Colors.greenAccent,
+  //   location: "Remote",
+  //   title: 'App Developer',
+  //   company: 'Kylo Apps',
+  //   startDate: 'Sep 2021',
+  //   endDate: 'Oct 2021',
+  //   bulletPoints: [
+  //     "Collaborated as a team member in developing a cryptocurrency wallet, akin to Trust Wallet, showcasing strong teamwork and blockchain app development expertise.",
+  //     "Proficiently integrated REST APIs into the application, enhancing its functionality and connectivity with external services."
+  //   ],
+  // ),
+  // JobExperience(
+  //   color: Colors.black,
+  //   location: "Remote",
+  //   title: 'Flutter App Intern',
+  //   company: 'Cogent Web Services',
+  //   startDate: 'Dec 2020',
+  //   endDate: 'June 2021',
+  //   bulletPoints: [
+  //     "Independently developed a Life Simulator game using Flutter from scratch, applying state-of-the-art state management practices to ensure a top-tier user experience.",
+  //     "Leveraged Flutter's robust features to craft an immersive and captivating gameplay experience, demonstrating proficiency in app development.",
+  //     "Successfully implemented Google Ads, in-app purchases, and Hive database for efficient user data storage and monetization strategies.",
+  //     "Generated creative ideas for client pitches, fostering creativity and ensuring the game's entertainment value and thought-provoking nature.",
+  //     "Published the game on the Play Store, achieving over 5,000 downloads, showcasing the ability to deliver a popular and engaging mobile application.",
+  //   ],
+  // ),
 ];
 
 const String youtubeChannel = "https://www.youtube.com/@highcoder";
@@ -255,20 +256,16 @@ const String toGithub = "https://github.com/yuvaraj8080";
 const String toInstagram = "https://www.instagram.com/yuvaraj_dekhane/";
 const String resumeLink =
     "https://drive.google.com/file/d/1LO3Km6fFkJVW92MNXRLSYl--E9YlTHJd/view";
-const String email = "deepakmittal941@gmail.com";
-String introduction =
-    "Welcome to my portfolio website, this website is highly inspired(almost copied) from Pawan Kumar.\n\nI am a Developer with 3 years of experience in flutter. Worked in many startups most recently worked with Stimuler an application that helps prepare students for Ielts and other english exams.\n\nWhen i am not developing I am mainly watching some movies or series or making stuff on Youtube or just watching fireship";
-const String playApps =
-    "https://play.google.com/store/apps/developer?id=AppyMonk";
+const String email = "teamloading8080@gmail.com";
+String introduction = "Hi, I’m Yuvaraj Dekhane. I completed my schooling in Jalane, Maharashtra, I then attended Wilson College in Mumbai for my 12th grade, I am currently a third-year Computer Science student at RGIT, Andheri, Mumbai University.I have developed strong skills in Java, Dart, and C Programing Languages. Over the past year, I have focused on Flutter development and have become proficient in building Flutter apps using state management tools such as Getx and Bloc, and utilizing Firebase for backend services. My Flutter journey has also included learning Tflite, RestAPI, DataTable, and Flutter web technology.I have built more than 15+ apps, which include social, helpful and safety apps, business-related apps, machine learning apps, and educational apps. Additionally, I have developed apps for hackathons and Pitches idea for ideathons, through which I have acquired skills in communication, team management, and project management. I also working as a Flutter Developer intern at Chemisphere for three months Apart from academics, I enjoy creating real-time applications and building challenging apps. I am passionate about continuing to develop my skills and contributing to innovative projects.";
+const String playApps = "https://play.google.com/store/apps/developer?id=AppyMonk";
 
 List<SkillsModel> skills = [
-  SkillsModel(skillName: "Flutter", colorS: Colors.blue, iconPath: "random"),
+  SkillsModel(skillName: "Flutter",
+      colorS: Colors.blue,
+      iconPath: "random"),
   SkillsModel(
     skillName: "Firebase",
-    colorS: Colors.yellow,
-  ),
-  SkillsModel(
-    skillName: "Github",
     colorS: Colors.yellow,
   ),
   SkillsModel(
@@ -280,29 +277,56 @@ List<SkillsModel> skills = [
     colorS: Colors.orange,
   ),
   SkillsModel(
-    skillName: "Riverpod",
+    skillName: "GetX",
     colorS: Colors.blue,
   ),
   SkillsModel(
-    skillName: "CI/CD",
+    skillName: "Bloc",
+    colorS: Colors.blue,
+  ),
+  SkillsModel(
+    skillName: "Java",
     colorS: Colors.yellow,
   ),
   SkillsModel(
-    skillName: "Code Magic",
+    skillName: "C",
+    colorS: Colors.yellow,
+  ),
+  SkillsModel(
+    skillName: "TypeScript",
     colorS: Colors.orange,
   ),
   SkillsModel(
-    skillName: "Firebase",
+    skillName: "Node.js",
     colorS: Colors.yellow,
   ),
   SkillsModel(
-    skillName: "REST API",
+    skillName: "MongoDb",
     colorS: Colors.yellow,
   ),
+
+  SkillsModel(
+    skillName: "Tflite",
+    colorS: Colors.yellow,
+  ),
+  SkillsModel(
+    skillName: "Flutter Web",
+    colorS: Colors.yellow,
+  ),
+  SkillsModel(
+    skillName: "Github",
+    colorS: Colors.yellow,
+  ),
+
+  SkillsModel(
+    skillName: "Android Studio",
+    colorS: Colors.yellow,
+  ),
+
 ];
 
 List<SkillsModel> languages = [
-  SkillsModel(skillName: "Punjabi", colorS: Colors.orange),
+  SkillsModel(skillName: "Marathi", colorS: Colors.orange),
   SkillsModel(skillName: "Hindi", colorS: Colors.black),
   SkillsModel(skillName: "English", colorS: Colors.blueGrey),
 ];

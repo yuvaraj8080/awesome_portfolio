@@ -37,27 +37,22 @@ class _AboutMeState extends State<AboutMe> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 const Center(
                   child: CircleAvatar(
-                    radius: 50,
+                    radius: 60,backgroundImage:AssetImage("assets/images/1706105069760.jpeg"),
                   ),
                 ),
                 Container(
                   alignment: Alignment.center,
                   padding:
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                  child: Text(
-                    "Hi, I am Deepak Mittal",
-                    style: GoogleFonts.openSans(
-                        fontSize: 20, fontWeight: FontWeight.bold),
+                  child: Text("Hi, Yuvaraj Dekhane",
+                    style: GoogleFonts.openSans(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text(
-                  introduction,
-                  style: GoogleFonts.openSans(
-                      fontSize: 15, fontWeight: FontWeight.w500),
+                Text(introduction, style: GoogleFonts.openSans(fontSize: 15, fontWeight: FontWeight.w500),
                 ).animate().fadeIn(duration: const Duration(milliseconds: 500))
               ],
             ),
