@@ -250,12 +250,12 @@ final List<JobExperience> jobExperiences = [
 const String youtubeChannel = "https://www.youtube.com/@highcoder";
 const String linkedIn = "https://www.linkedin.com/in/high-coder/";
 const String github = "https://github.com/high-coder";
-const String twitter = "https://twitter.com/highcoder__";
+const String Fiverr = "https://www.fiverr.com/yuvarajdekhane/buying?source=avatar_menu_profile";
+const String upwork = "https://www.fiverr.com/yuvarajdekhane/buying?source=avatar_menu_profile";
 const String toLinkdin = "https://www.linkedin.com/in/yuvaraj-dekhane-473064297/";
 const String toGithub = "https://github.com/yuvaraj8080";
 const String toInstagram = "https://www.instagram.com/yuvaraj_dekhane/";
-const String resumeLink =
-    "https://drive.google.com/file/d/1LO3Km6fFkJVW92MNXRLSYl--E9YlTHJd/view";
+const String resumeLink = "https://drive.google.com/file/d/1LO3Km6fFkJVW92MNXRLSYl--E9YlTHJd/view";
 const String email = "teamloading8080@gmail.com";
 String introduction = "Hi, I’m Yuvaraj Dekhane. I completed my schooling in Jalane, Maharashtra, I then attended Wilson College in Mumbai for my 12th grade, I am currently a third-year Computer Science student at RGIT, Andheri, Mumbai University.I have developed strong skills in Java, Dart, and C Programing Languages. Over the past year, I have focused on Flutter development and have become proficient in building Flutter apps using state management tools such as Getx and Bloc, and utilizing Firebase for backend services. My Flutter journey has also included learning Tflite, RestAPI, DataTable, and Flutter web technology.I have built more than 15+ apps, which include social, helpful and safety apps, business-related apps, machine learning apps, and educational apps. Additionally, I have developed apps for hackathons and Pitches idea for ideathons, through which I have acquired skills in communication, team management, and project management. I also working as a Flutter Developer intern at Chemisphere for three months Apart from academics, I enjoy creating real-time applications and building challenging apps. I am passionate about continuing to develop my skills and contributing to innovative projects.";
 const String playApps = "https://play.google.com/store/apps/developer?id=AppyMonk";

@@ -123,6 +123,7 @@ class HomePage extends StatelessWidget {
                               child:  FrostedWidget(
                                 childW: Column(
                                   children:[
+                                   const   Text("Connect With Me",style:TextStyle(fontWeight:FontWeight.bold)),
                                     Padding(
                                       padding: const EdgeInsets.all(10.0),
                                       child: Row(
@@ -132,6 +133,17 @@ class HomePage extends StatelessWidget {
                                         GestureDetector(onTap:()=> currentState.launchInBrowser(toGithub),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/github.png"))),
                                         GestureDetector(onTap:()=> currentState.launchInBrowser(toInstagram),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/insata.png"))),
                                       ],),
+                                    ),
+                                    const SizedBox(height:5),
+                                    Padding(
+                                      padding: const EdgeInsets.all(10.0),
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                          GestureDetector(onTap:()=> currentState.launchInBrowser(Fiverr),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/linakdin.png"))),
+                                          GestureDetector(onTap:()=> currentState.launchInBrowser(toGithub),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/github.png"))),
+                                          GestureDetector(onTap:()=> currentState.launchInBrowser(toInstagram),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/insata.png"))),
+                                        ],),
                                     )
                                   ],
                                 ),
@@ -190,10 +202,10 @@ class HomePage extends StatelessWidget {
                                           child:Text(
                                             '1) Working In Reidius Infra & Chemisphere as flutter intern',
                                             style: GoogleFonts.inter(
-                                              fontSize: 13,
+                                                fontSize:10,
                                                 color: Colors.black,
                                                 fontWeight:
-                                                FontWeight.w600),
+                                                FontWeight.w700),
                                             maxLines:4,
                                           )),
 
@@ -204,10 +216,22 @@ class HomePage extends StatelessWidget {
                                           child:Text(
                                             '2) I Have Developed 20+ App Using Flutter Technology',
                                             style: GoogleFonts.inter(
-                                                fontSize: 13,
+                                                fontSize:10,
                                                 color: Colors.black,
                                                 fontWeight:
-                                                FontWeight.w600),
+                                                FontWeight.w700),
+                                            maxLines:4,
+                                          )),
+
+                                      Align(
+                                          alignment: Alignment.topLeft,
+                                          child:Text(
+                                            '3)Which Include Social Helpful, Safety, Tflite, Education,AI/Ml and  Business Apps',
+                                            style: GoogleFonts.inter(
+                                                fontSize:10,
+                                                color: Colors.black,
+                                                fontWeight:
+                                                FontWeight.w700),
                                             maxLines:4,
                                           )),
 
@@ -216,12 +240,12 @@ class HomePage extends StatelessWidget {
                                       Align(
                                           alignment: Alignment.topLeft,
                                           child:Text(
-                                            '3) Over the past 2 years focus on App Development',
+                                            '4) Over the past 2 years focus on App Development',
                                             style: GoogleFonts.inter(
-                                                fontSize: 13,
+                                                fontSize:10,
                                                 color: Colors.black,
                                                 fontWeight:
-                                                FontWeight.w600),
+                                                FontWeight.w700),
                                             maxLines:4,
                                           )),
 
@@ -230,12 +254,12 @@ class HomePage extends StatelessWidget {
                                       Align(
                                           alignment: Alignment.topLeft,
                                           child:Text(
-                                            '3) Published 3 apps on play store',
+                                            '5) I Have Published 3 apps on play store',
                                             style: GoogleFonts.inter(
-                                                fontSize: 13,
+                                                 fontSize: 10,
                                                 color: Colors.black,
                                                 fontWeight:
-                                                FontWeight.w600),
+                                                FontWeight.w700),
                                             maxLines:4,
                                           )),
 
@@ -243,12 +267,12 @@ class HomePage extends StatelessWidget {
                                       Align(
                                           alignment: Alignment.topLeft,
                                           child:Text(
-                                            '4) MY App solved  Real word problem, and using 100+ users ',
+                                            '6) MY App solved  Real word problem, and using 100+ users ',
                                             style: GoogleFonts.inter(
-                                                fontSize: 13,
+                                                fontSize:10,
                                                 color: Colors.black,
                                                 fontWeight:
-                                                FontWeight.w600),
+                                                FontWeight.w700),
                                             maxLines:4,
                                           )),
                                     ],
