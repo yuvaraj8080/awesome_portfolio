@@ -251,7 +251,7 @@ const String youtubeChannel = "https://www.youtube.com/@highcoder";
 const String linkedIn = "https://www.linkedin.com/in/high-coder/";
 const String github = "https://github.com/high-coder";
 const String Fiverr = "https://www.fiverr.com/yuvarajdekhane/buying?source=avatar_menu_profile";
-const String upwork = "https://www.fiverr.com/yuvarajdekhane/buying?source=avatar_menu_profile";
+// const String upwork = "https://www.fiverr.com/yuvarajdekhane/buying?source=avatar_menu_profile";
 const String toLinkdin = "https://www.linkedin.com/in/yuvaraj-dekhane-473064297/";
 const String toGithub = "https://github.com/yuvaraj8080";
 const String toInstagram = "https://www.instagram.com/yuvaraj_dekhane/";

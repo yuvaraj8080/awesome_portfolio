@@ -58,6 +58,19 @@ List<GridViewItem> gridViewItems = [
   const GridViewItem(
     imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqozVHv0fHusGky73gcUtK6onGf10ymZ3ReA&s',
     label: 'Android S',
-  )
+  ),
+  const GridViewItem(
+    imageUrl: 'https://shop.bloclibrary.dev/cdn/shop/products/kiss-cut-stickers-5.5x5.5-default-606a33ae77a7e_grande.jpg?v=1617572787',
+    label: 'BLoc',
+  ),
+  const GridViewItem(
+    imageUrl: 'https://i0.wp.com/ahex.co/wp-content/uploads/2022/06/MERN-Stack-Development-Company.png?fit=475%2C338&ssl=1',
+    label: 'MERN',
+  ),
+  const GridViewItem(
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi7gYsppNJhxinw1uOB03szNE81aFsAOavaQ&s',
+    label: 'Github',
+  ),
+
   // Add more items to the list as needed
 ];

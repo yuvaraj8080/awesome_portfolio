@@ -140,9 +140,7 @@ class HomePage extends StatelessWidget {
                                       child: Row(
                                         mainAxisAlignment:MainAxisAlignment.spaceAround,
                                         children: [
-                                          GestureDetector(onTap:()=> currentState.launchInBrowser(Fiverr),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/linakdin.png"))),
-                                          GestureDetector(onTap:()=> currentState.launchInBrowser(toGithub),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/github.png"))),
-                                          GestureDetector(onTap:()=> currentState.launchInBrowser(toInstagram),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/insata.png"))),
+                                          GestureDetector(onTap:()=> currentState.launchInBrowser(Fiverr),child:const CircleAvatar(backgroundImage:AssetImage("assets/icons/fivver.png"))),
                                         ],),
                                     )
                                   ],
@@ -197,10 +195,12 @@ class HomePage extends StatelessWidget {
                                         minFontSize: 15,
                                         maxLines: 3,
                                       ),
+                                      const SizedBox(height:5),
+
                                       Align(
                                           alignment: Alignment.topLeft,
                                           child:Text(
-                                            '1) Working In Reidius Infra & Chemisphere as flutter intern',
+                                            '1) Intern at Reidius Infra & Chemisphere as Flutter Developer',
                                             style: GoogleFonts.inter(
                                                 fontSize:10,
                                                 color: Colors.black,
@@ -209,12 +209,12 @@ class HomePage extends StatelessWidget {
                                             maxLines:4,
                                           )),
 
-                                      const SizedBox(height:6),
+                                      const SizedBox(height:5),
 
                                       Align(
                                           alignment: Alignment.topLeft,
                                           child:Text(
-                                            '2) I Have Developed 20+ App Using Flutter Technology',
+                                            '2) I Have Developed 20+ App And Admin Panel Using Flutter Technology',
                                             style: GoogleFonts.inter(
                                                 fontSize:10,
                                                 color: Colors.black,
@@ -223,10 +223,27 @@ class HomePage extends StatelessWidget {
                                             maxLines:4,
                                           )),
 
+                                      const SizedBox(height:5),
+
+
                                       Align(
                                           alignment: Alignment.topLeft,
                                           child:Text(
-                                            '3)Which Include Social Helpful, Safety, Tflite, Education,AI/Ml and  Business Apps',
+                                            '3) I Have Published 2 apps on play store',
+                                            style: GoogleFonts.inter(
+                                                fontSize: 10,
+                                                color: Colors.black,
+                                                fontWeight:
+                                                FontWeight.w700),
+                                            maxLines:4,
+                                          )),
+
+                                      const SizedBox(height:5),
+
+                                      Align(
+                                          alignment: Alignment.topLeft,
+                                          child:Text(
+                                            '4) Over the past 2 years i have focus on App Development',
                                             style: GoogleFonts.inter(
                                                 fontSize:10,
                                                 color: Colors.black,
@@ -235,12 +252,12 @@ class HomePage extends StatelessWidget {
                                             maxLines:4,
                                           )),
 
-                                      const SizedBox(height:6),
+                                      const SizedBox(height:5),
 
                                       Align(
                                           alignment: Alignment.topLeft,
                                           child:Text(
-                                            '4) Over the past 2 years focus on App Development',
+                                            '5) MY App solved  Real word problem, and Realtime time uses in market',
                                             style: GoogleFonts.inter(
                                                 fontSize:10,
                                                 color: Colors.black,
@@ -249,25 +266,26 @@ class HomePage extends StatelessWidget {
                                             maxLines:4,
                                           )),
 
-                                      const SizedBox(height:6),
+                                      const SizedBox(height:5),
 
                                       Align(
                                           alignment: Alignment.topLeft,
                                           child:Text(
-                                            '5) I Have Published 3 apps on play store',
+                                            '6) Developed app for Hackathon and Freelance...',
                                             style: GoogleFonts.inter(
-                                                 fontSize: 10,
+                                                fontSize:10,
                                                 color: Colors.black,
                                                 fontWeight:
                                                 FontWeight.w700),
                                             maxLines:4,
                                           )),
 
-                                      const SizedBox(height:6),
+                                      const SizedBox(height:5),
+
                                       Align(
                                           alignment: Alignment.topLeft,
                                           child:Text(
-                                            '6) MY App solved  Real word problem, and using 100+ users ',
+                                            '7)Which Include Social Helpful, Safety App, Tflite, Educational App, AI/Ml App and  Business Apps',
                                             style: GoogleFonts.inter(
                                                 fontSize:10,
                                                 color: Colors.black,
